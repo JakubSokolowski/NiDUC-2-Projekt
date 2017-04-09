@@ -5,7 +5,7 @@ Jako wiadomości będziemy przesyłać łańcuchy znaków i obrazy (z góry usta
 
 W programie wykorzystano następujące algorytmy wykrywania błędów :
 
-1. Kontola parzystości (bit parzystości) - polega na dodawaniu do wysłanej wiadomości bitu kontrolnego, który przyjmuje waartość 1, gdy liczba jednynek w przesłanej wiadomości jest nieparzysta, lub 0 gdy jest parzysta
+1. Kontola parzystości (bit parzystości) - polega na dodawaniu do wysłanej wiadomości bitu kontrolnego, który przyjmuje wartość 1, gdy liczba jednynek w przesłanej wiadomości jest nieparzysta, lub 0 gdy jest parzysta
                                            
 2. Cykliczny kod nadmiarowy (Cyclic Redundancy Check, CRC) - system sum kontrolnych, n-bitowy cykliczny kod nadmiarowy (n-bitowy CRC) definiuje się jako resztę z dzielenia ciągu danych przez (n+1)-bitowy dzielnik CRC, zwany również wielomianem CRC
 
