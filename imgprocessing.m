@@ -1,3 +1,12 @@
+%User input
+prompt = 'Enter the filename: ';
+filename1 = input(prompt)
+
+%filename2 = input(prompt)
+
+
+
+
 %Generating random strings
 symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -12,7 +21,7 @@ randString = symbols( ceil(rand(1,stringLength)*numRands) )
 
 
 %Returns height x width x 3 array
-testImage = imread('shipCollision.jpg');
+testImage = imread(filename1);
 
 %Creates noise of diffrent type and intensity;
 testImage2 = imnoise(testImage,'gaussian');
