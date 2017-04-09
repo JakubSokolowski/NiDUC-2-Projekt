@@ -1,11 +1,7 @@
 %User input
 prompt = 'Enter the filename: ';
 filename1 = input(prompt)
-
 %filename2 = input(prompt)
-
-
-
 
 %Generating random strings
 symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
