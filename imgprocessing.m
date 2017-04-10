@@ -5,18 +5,8 @@ filename = input(prompt,'s');
 disp(filename);
 %filename2 = input(prompt)
 
-%Generating random strings
-symbols = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-%find number of random characters to choose from
-numRands = length(symbols); 
-
-%specify length of random string to generate
-stringLength = 10;
-
 %generate random string
-randString = symbols( ceil(rand(1,stringLength)*numRands) );
-
+randString = randStr(stringLength);
 disp(randString)
 
 %Returns height x width x 3 array
@@ -31,7 +21,7 @@ testImage2 = imnoise(testImage,'gaussian');
 %testImage2 = imnoise(testImage,'gaussian'.intensity);
 %testImage2 = imnoise(testImage,'speckle');
 
-%displays comprasion of immages
+%displays comparison of immages
 imshowpair(testImage,testImage2,'montage');
 
 
