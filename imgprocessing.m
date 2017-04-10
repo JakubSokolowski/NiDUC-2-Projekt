@@ -1,6 +1,8 @@
 %User input
 prompt = 'Enter the filename: ';
-filename1 = input(prompt)
+%x = input(prompt);
+filename = input(prompt,'s');
+disp(filename);
 %filename2 = input(prompt)
 
 %Generating random strings
@@ -13,11 +15,12 @@ numRands = length(symbols);
 stringLength = 10;
 
 %generate random string
-randString = symbols( ceil(rand(1,stringLength)*numRands) )
+randString = symbols( ceil(rand(1,stringLength)*numRands) );
 
+disp(randString)
 
 %Returns height x width x 3 array
-testImage = imread(filename1);
+testImage = imread(filename);
 
 %Creates noise of diffrent type and intensity;
 testImage2 = imnoise(testImage,'gaussian');
