@@ -6,7 +6,7 @@ disp(filename);
 %filename2 = input(prompt)
 
 %generate random string
-randString = randStr(stringLength);
+randString = randStr(20);
 disp(randString)
 
 %Returns height x width x 3 array
@@ -15,6 +15,8 @@ testImage = imread(filename);
 %Creates noise of diffrent type and intensity;
 testImage2 = imnoise(testImage,'gaussian');
 
+disp(crc32(testImage))
+disp(crc32(testImage2))
 %Random Intensity
 %intensity = rand();
 %testImage2 = imnoise(testImage,'salt & pepper',intensity);
