@@ -17,14 +17,19 @@ testImage2 = imnoise(testImage,'gaussian');
 
 disp(crc32(testImage))
 disp(crc32(testImage2))
+
 %Random Intensity
 %intensity = rand();
 %testImage2 = imnoise(testImage,'salt & pepper',intensity);
 %testImage2 = imnoise(testImage,'gaussian'.intensity);
 %testImage2 = imnoise(testImage,'speckle');
 
-%displays comparison of immages
+%displays comparison of images
 imshowpair(testImage,testImage2,'montage');
+
+
+%Testing simulation using crc32 checksum
+simulation.m
 
 
 
