@@ -13,6 +13,7 @@ W programie wykorzystano następujące algorytmy wykrywania błędów :
 
 
 Harmonogram Projektu:
+
 24.04.2017 - symulacja wysyłania i zaszumiania wiadomości, sprawdzanie poprawności za pomocą CRC32, wysyłanie prośby o ponowne
              przesłanie   
              
