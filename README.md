@@ -14,8 +14,12 @@ W programie wykorzystano następujące algorytmy wykrywania błędów :
 
 Harmonogram Projektu:
 24.04.2017 - symulacja wysyłania i zaszumiania wiadomości, sprawdzanie poprawności za pomocą CRC32, wysyłanie prośby o ponowne
-             przesłanie    
+             przesłanie   
+             
 08.05.2017 - dodanie sprawdzania bitu parzystości i sumy kontrolnej SHA-1, zmiany prośby o powtórzenie na 3 bitowy kod powtarzalny,                    detekcja i korekcja prośby o powtórzenie
+
 22.05.2017 - podział informacji na bloki, wykorzystanie SR ARQ
+
 05.06.2017 - badania statystyczne detekcji zmiany wiadomości
+
 19.06.2017 - prezentacja projektu
