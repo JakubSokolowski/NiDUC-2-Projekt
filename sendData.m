@@ -8,7 +8,7 @@ validateattributes(disruptChance,{'double'},attributes);
 prob=rand;
 if prob<disruptChance
     %Modify the data, compute the signature
-    data = imnoise(x,'gaussian',0.0001);
+    data = imnoise(x,'gaussian',0.001);
 else
     data = x;   
 end
