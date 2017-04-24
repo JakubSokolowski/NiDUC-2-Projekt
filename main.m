@@ -29,7 +29,7 @@ imshowpair(testImage,testImage2,'montage');
 
 
 %Testing simulation using crc32 checksum
-simulation.m
+simulation;
 
 
 
