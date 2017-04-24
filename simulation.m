@@ -8,9 +8,9 @@ disp(signature1)
 %If repeat is set to 1, message needs to be repeated
 repeat = 1;
 count = 1;
-chanceToFail = 0.8;
+chanceToFail = 0.65;
 while repeat
-    %Simulate sending message through channel with 80% chance to change the
+    %Simulate sending message through channel with given chance to change the
     %message. Display the current received message signature and how many 
     %attempts took to send the message properly.
     disp(count)
