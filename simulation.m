@@ -4,7 +4,7 @@ image = imread('testImage.png');
 signature1 = crc32(image);
 %test2
 disp(signature1)
-
+%JS BRANCH TESTs
 %If repeat is set to 1, message needs to be repeated
 repeat = 1;
 count = 1;
