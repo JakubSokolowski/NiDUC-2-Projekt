@@ -4,7 +4,7 @@ prompt = 'Enter the filename: ';
 filename = input(prompt,'s');
 disp(filename);
 %filename2 = input(prompt)
-
+%sssssssssssss
 %generate random string
 randString = randStr(20);
 disp(randString)
