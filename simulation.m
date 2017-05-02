@@ -2,13 +2,13 @@
 image = imread('testImage.png');
 %Compute Signature
 signature1 = crc32(image);
-
+%test2
 disp(signature1)
 
 %If repeat is set to 1, message needs to be repeated
 repeat = 1;
 count = 1;
-chanceToFail = 0.65;
+chanceToFail = 0.95;
 while repeat
     %Simulate sending message through channel with given chance to change the
     %message. Display the current received message signature and how many 
