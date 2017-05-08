@@ -4,13 +4,22 @@ image = imread('testImage.png');
 signature1 = crc32(image);
 %test2
 disp(signature1)
+<<<<<<< HEAD
 bitImage1=dec2bin(signature1);
 %If repeat is set to 3, message needs to be repeated
+=======
+
+%If bit is set to 3, message needs to be repeated
+>>>>>>> origin/MM
 repeat = 0;
 count = 1;
 bit=3;
 chanceToFail = 0.95;
+<<<<<<< HEAD
 while bit>1 
+=======
+while bit>2 
+>>>>>>> origin/MM
     %Simulate sending message through channel with given chance to change the
     %message. Display the current received message signature and how many 
     %attempts took to send the message properly.
@@ -23,6 +32,7 @@ while bit>1
     signature2 = crc32(recived);
     bitImage2=dec2bin(signature2);
     disp(signature2)
+<<<<<<< HEAD
     
     bit = bit + abs(length(find(bitImage1=='1'))-length(find(bitImage2=='1'))); 
     
@@ -31,3 +41,31 @@ end
 imshowpair(image,recived,'montage')
 
 disp('Message sent succesfully') 
+=======
+    bit = bit + compareSignatures(signature1,signature2); 
+    if compareSignatures(signature1,signature2) == 0
+        imshowpair(image,recived,'montage');
+    end
+    
+    recived = sendData(image,chanceToFail);
+    signature2 = crc32(recived);
+    disp(signature2)
+    bit = bit + compareSignatures(signature1,signature2);
+    if compareSignatures(signature1,signature2) == 0
+        imshowpair(image,recived,'montage');
+    end
+    
+    recived = sendData(image,chanceToFail);
+    signature2 = crc32(recived);
+    disp(signature2)
+    bit = bit + compareSignatures(signature1,signature2);
+    if compareSignatures(signature1,signature2) == 0
+        imshowpair(image,recived,'montage');
+    end
+    
+end  
+
+
+
+disp('Message sent succesfully') 
+>>>>>>> origin/MM

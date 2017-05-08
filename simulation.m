@@ -4,9 +4,16 @@ image = imread('testImage.png');
 signature1 = crc32(image);
 %test2
 disp(signature1)
+<<<<<<< HEAD
 bitImage1=dec2bin(signature1);
 %If repeat is set to 3, message needs to be repeated
+=======
+
+
+%If bit is set to 3, message needs to be repeated
+>>>>>>> origin/MM
 repeat = 0;
+
 count = 1;
 bit=3;
 chanceToFail = 0.95;
