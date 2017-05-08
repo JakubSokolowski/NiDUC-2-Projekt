@@ -45,6 +45,5 @@ while bit>2
     
 end  
 
-imshowpair(image,recived,'montage');
 
 disp('Message sent succesfully')
