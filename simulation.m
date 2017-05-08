@@ -4,16 +4,11 @@ image = imread('testImage.png');
 signature1 = crc32(image);
 %test2
 disp(signature1)
-<<<<<<< HEAD
+%Converting into binary
 bitImage1=dec2bin(signature1);
-%If repeat is set to 3, message needs to be repeated
-=======
 
-
-%If bit is set to 3, message needs to be repeated
->>>>>>> origin/MM
+%If bit is set to 2 or 3, message needs to be repeated
 repeat = 0;
-
 count = 1;
 bit=3;
 chanceToFail = 0.95;
@@ -25,15 +20,15 @@ while bit>1
     disp(count)
     count = count + 1;
     %Message after passing through communication chanel
-    recived = sendData(image,chanceToFail);
+    received = sendData(image,chanceToFail);
     %Compute new signature
-    signature2 = crc32(recived);
+    signature2 = crc32(received);
     bitImage2=dec2bin(signature2);
     disp(signature2)
     bit = bit + abs(length(find(bitImage1=='1'|bitImage1=='0'))-length(find(bitImage2=='1'|bitImage2=='0'))); 
     
 end  
 
-imshowpair(image,recived,'montage')
+imshowpair(image,received,'montage')
 
 disp('Message sent succesfully') 
