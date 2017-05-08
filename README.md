@@ -9,7 +9,7 @@ W programie wykorzystano następujące algorytmy wykrywania błędów :
                                            
 2. Cykliczny kod nadmiarowy (Cyclic Redundancy Check, CRC) - system sum kontrolnych, n-bitowy cykliczny kod nadmiarowy (n-bitowy CRC) definiuje się jako resztę z dzielenia ciągu danych przez (n+1)-bitowy dzielnik CRC, zwany również wielomianem CRC
 
-3. Sumy kontrolne z wykorzystanie SHA-256 (Secure Hash Algorithm) - algorytm kryptograficzny, który z ciągu danych o dowolnej długości generuje 256 bitowy skrót (sumę kontrolną). 
+3. Sumy kontrolne z wykorzystanie SHA-512 (Secure Hash Algorithm) - algorytm kryptograficzny, który z ciągu danych o dowolnej długości generuje 512 bitowy skrót (sumę kontrolną). 
 
 
 Harmonogram Projektu:
