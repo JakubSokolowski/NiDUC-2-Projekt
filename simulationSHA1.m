@@ -1,7 +1,7 @@
 %Load file
 image = imread('testImage.png');
 %Set property of encoding function
-Opt.Method='SHA-512'; Opt.Input='bin';
+Opt.Method='SHA-256'; Opt.Input='bin';
 %Compute Signature
 signature1 = DataHash(uint8(image), Opt);
 %test2
