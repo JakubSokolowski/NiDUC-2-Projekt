@@ -4,8 +4,7 @@ image = imread('testImage.png');
 signature1 = crc32(image);
 %test2
 disp(signature1)
-%Converting into binary
-bitImage1=dec2bin(signature1);
+
 
 %If bit is set to 2 or 3, message needs to be repeated
 repeat = 3;
@@ -23,7 +22,6 @@ while bit>1
     received = sendData(image,chanceToFail);
     %Compute new signature
     signature2 = crc32(received);
-    bitImage2=dec2bin(signature2);
     disp(signature2)
     bit=noiseImage(bit,chanceToFail);
     if bit<2
