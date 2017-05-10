@@ -4,6 +4,6 @@ function [ repeat ] = compareSignatures( signature1, signature2 )
 if signature1 == signature2
     repeat = 0;
 else
-    repeat = 1;
+    repeat = 3;
 end
 
