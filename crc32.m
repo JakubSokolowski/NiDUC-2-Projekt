@@ -6,11 +6,7 @@ function [ crc ] = crc32( data )
 %   (uint8). The result is an unsigned 32-bit integer (uint32). Polynomial
 %   bit positions have been reversed, and the algorithm modified, in order
 %   to improve performance.
-
-%   Version:    1.00
-%   Programmer: Costas Vlachos
-%   Date:       23-Dec-2014
-
+%
 % Initialize variables
 crc  = uint32(hex2dec('FFFFFFFF'));
 poly = uint32(hex2dec('EDB88320'));

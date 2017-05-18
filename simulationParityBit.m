@@ -18,7 +18,7 @@ while repeat
     disp(count)
     count = count + 1;
     %Message after passing through communication chanel
-    recived = sendData(image,chanceToFail);
+    recived = sendDataWithSelectiveNoise(image,chanceToFail);
     %Compute new signature
     signature2 = getParityBit(recived);
     disp(signature2)

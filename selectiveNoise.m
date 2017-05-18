@@ -1,6 +1,5 @@
 function [ image ] = selectiveNoise( image, n )
 % Negate given number of pixels in image
-%   Detailed explanation goes here
 
 %Repeat the loop n times
 for c = 1:n
