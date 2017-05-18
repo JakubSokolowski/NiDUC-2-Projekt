@@ -1,5 +1,5 @@
 %Load file
-image = imread('testImage.png');
+image = imread('TestImages/testImage.png');
 %Set property of encoding function
 %Compute Signature
 signature1 = getParityBit(image);
