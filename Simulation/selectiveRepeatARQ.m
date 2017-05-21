@@ -1,4 +1,4 @@
-image = imread('Test Images/512x512color.bmp');
+image = imread('Test Images/512x512.png');
 %rgbImage = imread('Test Images/512x512.png');
 % Get the dimensions of the image.  numberOfColorBands should be = 3.
 [rows, columns, numberOfColorBands] = size(image);
@@ -27,8 +27,7 @@ else
     cellMessage = mat2cell(image, blockVectorR, blockVectorC);
 end
 
-
-
+%Create the cell array that holds the received message
 cellReceived = cell(size(cellMessage));
 
 blockIndex = 1;
