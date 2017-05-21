@@ -3,11 +3,15 @@ function [ image ] = selectiveNoise( image, n )
 
 %Repeat the loop n times
 for c = 1:n
+    [column,row,color] = size(image);
+    if(column == 0 || row == 0)
+        break
+    end
     %Choose random coordinates in image
-    x = randi([1,size(image,1)]);
-    y = randi([1,size(image,2)]);
+    x = randi([1,column]);
+    y = randi([1,row]);
     %Choose random color (r,g,b)
-    z = randi([1,3]);
+    z = randi([1,color]);
     %Convert random pixel to binary string
     randomPixel = dec2bin(image(x,y,z));
     %Choose random place in string
