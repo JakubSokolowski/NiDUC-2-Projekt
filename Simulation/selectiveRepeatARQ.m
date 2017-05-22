@@ -34,7 +34,10 @@ blockIndex = 1;
 blockRow = size(cellMessage, 1);
 blockColumn = size(cellMessage, 2);
 
+%Create bool array, with information which blocks were received properly.
+%Set all the initial values to 0
 blocksReceived = zeros(9,9);
+
 repeat = 1;
 while repeat
     
@@ -46,11 +49,18 @@ for r = 1 : blockRow
             continue
         end
         %Send the block, place it in the received cell array
-        cellReceived{r,c} = sendData(cellMessage{r,c},0.9);
+        %cellReceived{r,c} = sendDataWithSelectiveNoise(cellMessage{r,c},0.9);
+        cellReceived{r,c} = sendData(cellMessage{r,c},0.7);
         
         %Calculate the signatures
         send = getParityBit(cell2mat(cellMessage(r,c)));          
         received = getParityBit(cell2mat(cellReceived(r,c)));
+        
+        %send = crc32(cell2mat(cellMessage(r,c)));          
+        %received = crc32(cell2mat(cellReceived(r,c)));
+        
+        %send = DataHash(cell2mat(cellMessage(r,c)));          
+        %received = DataHash(cell2mat(cellReceived(r,c)));
         
         %If the signatures match, mark the current block as received
         %properly
