@@ -1,5 +1,5 @@
 %Load file
-image = imread('testImage.png');
+image = imread('TestImages/testImage.png');
 %Set property of encoding function
 Opt.Method='SHA-512'; Opt.Input='bin';
 %Compute Signature
