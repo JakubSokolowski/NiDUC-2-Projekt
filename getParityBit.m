@@ -5,7 +5,7 @@ function [ parity_bit ] = getParityBit( data )
 
 data = dec2bin(data);
 count = sum(sum(data));
-if(mod(count,2)==2)
+if(mod(count,2)==0)
     parity_bit = 0;
 else
     parity_bit = 1;
